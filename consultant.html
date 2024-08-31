@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultants</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/Fontawesome-free-6.5.2-web/css/all.css">
+
+    <!-- Using Epilogue Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="nav">
+        <nav>
+            <div class="head">
+                Trad<span>.</span>
+            </div>
+            <div class="menu" id="menu">
+                <div>
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="client.html">Clients</a></li>
+                <li><a href="candidates.html">Candidates</a></li>
+                <li><a href="productivity.html">Productivity</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <div class="consultant-heading">
+        <div class="image">
+            <img src="Image/023.png" alt="">
+        </div>
+        <div class="overlay-1">
+            <span>Ancile For Candidates</span>
+            <h1>Amplify your impact and your life!</h1>
+            <button>Get Started</button>
+        </div>
+    </div>
+
+
+    <div class="consultant-content">
+        <div class="image-container-1">
+            <img src="Image/024.png" alt="">
+        </div>
+        <div class="text-container-1">
+            <h2>Get the job that matches your value!</h2>
+            <p>
+                You've got the skills and experience to get things done. There's a big demand for your talents, be it finance, accounting, IT, or management, but perhaps you're still looking for the right fit for your skills and wants the flexibility of consulting and project work. That's where Ancile consulting services comes in. We are going to sit with you and learn more about what makes you tick.
+            </p>
+            <p>
+                Creating opporturnity starts with your knowledge and experience, of course, but it also has a lot to do with who you are as a person and what's going to make you happy. Perhaps, it's the flexibility of 6-9 months important project. You tell us.
+            </p>
+            <p>
+                Then, we will talk to the best companies in the nation and the most innovative players in every industry, and we will find out what they need and the type of person they are looking for. We help you take your experience to the next level.
+            </p>
+        </div>
+    </div>
+
+    <div class="support-client">
+        <h1>Our Satisfied Clients</h1>
+        <img src="Image/client.png" alt="">
+    </div>
+
+    <div class="consultant-testimonial">
+        <div class="image">
+            <img src="Image/025.png" alt="">
+        </div>
+        <div class="text">
+            <p>
+                “I want to express my appreciation for all that Ancile has done for me over the past 4 years. I've enjoyed the varieties of the companies I've worked with, learning something new at each one. Every time a project came up, I knew that Ancile would make sure it was one where my specific skill set would be utilized"
+            </p>
+            <p class="author">
+                <span class="author-name">Candidate</span> <span class="author-industry">Financial Industry</span>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="apply-form">
+        <h2>Apply</h2>
+        <form action="https://formspree.io/f/moqgbrno" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Last Name" required>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="file-upload">
+                    <label for="resume">Resume/CV</label>
+                    <div class="upload-container">
+                        <button type="button" class="upload-btn"  onclick="document.getElementById('resume').click()">Upload PDF</button>
+                        <button type="button" class="choose-file"  onclick="document.getElementById('resume').click()">Choose File</button>
+                        <input type="file" id="resume" name="resume" accept="application/pdf">
+                        <small>PDF must be less than 5 MB</small>
+                    </div>
+                </div>                
+                <div class="file-upload">
+                    <label for="resume">Cover Letter</label>
+                    <div class="upload-container">
+                        <button type="button" class="upload-btn"  onclick="document.getElementById('resume').click()">Upload PDF</button>
+                        <button type="button" class="choose-file"  onclick="document.getElementById('resume').click()">Choose File</button>
+                        <input type="file" id="resume" name="resume" accept="application/pdf">
+                        <small>PDF must be less than 5 MB</small>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="linkedin">LinkedIn Profile</label>
+                    <input type="url" id="linkedin" name="linkedin" placeholder="LinkedIn Profile" required>
+                </div>
+                <div class="input-group">
+                    <label for="website">Website</label>
+                    <input type="url" id="website" name="website" placeholder="Website" required>
+                </div>
+            </div>
+    
+            <input type="submit" value="Apply">
+        </form>
+    </div>
+
+
+    <div class="insight">
+        <div class="insight-text">
+            <div class="insight-text-head">
+                Ancile Insights
+            </div>
+            <div class="insight-text-p">
+                Ancile works with clients across industries and ranging in size from Fortune 500 to mid-cap  growth and PE backed companies. Across all of our client work, we derive new insights and  implement new ways to help them drive revenue, gain efficiencies and keep costs low. Sharing  those insights and approaches helps us stay sharp.
+            </div>
+            <div class="insight-container">
+                <div class="insight-box">
+                    <img src="Image/016.jpeg" alt="">
+                    <div class="insight-box-text">
+                        <span class="insight-box-head">
+                            Winning at the Speed of Change
+                        </span>
+                        <hr>
+                        <div class="insight-box-number">
+                            05
+                        </div>
+                        <div class="insight-box-foot">
+                            Jan
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="insight-box">
+                    <img src="Image/017.jpeg" alt="">
+                    <div class="insight-box-text">
+                        <span class="insight-box-head">
+                            Improving Internal Banking Applications
+                        </span>
+                        <hr>
+                        <div class="insight-box-number">
+                            05
+                        </div>
+                        <div class="insight-box-foot">
+                            Jan
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="insight-box">
+                    <img src="Image/018.jpeg" alt="">
+                    <div class="insight-box-text">
+                        <span class="insight-box-head">
+                            Supply Chain Strategy - CPFR
+                        </span>
+                        <hr>
+                        <div class="insight-box-number">
+                            05
+                        </div>
+                        <div class="insight-box-foot">
+                            Jan
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="insight-box">
+                    <img src="Image/019.jpeg" alt="">
+                    <div class="insight-box-text">
+                        <span class="insight-box-head">
+                            Cybersecurtiy Success Stories
+                        </span>
+                        <hr>
+                        <div class="insight-box-number">
+                            05
+                        </div>
+                        <div class="insight-box-foot">
+                            Jan
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="visit">
+        <span>Visit Our Ancile Office in Your Region</span>
+        <button>Contact Ancile Today!</button>
+    </div>
+    
+
+    <footer>
+        <span>At Ancile Our Real Business Is You.</span>
+        <div class="footer-content">
+            <div class="footer-content-logo">
+                <div class="client">
+                    <img src="Image/logo-1.png" alt="">
+                    <div class="text">
+                        <span>For Clients</span>
+                        <p>Free yourself to focus</p>
+                    </div>
+                </div>
+                <div class="client">
+                    <img src="Image/logo-2.png" alt="">
+                    <div class="text">
+                        <span>For Consultants</span>
+                        <p>Project ninjas rejoice</p>
+                    </div>
+                </div>
+                <div class="client">
+                    <img src="Image/logo-3.png" alt="">
+                    <div class="text">
+                        <span>For Candidates</span>
+                        <p>The ideal job is here</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-link">
+                <div class="company">
+                    <span>Company</span>
+                    <a href="#">About</a>
+                    <a href="#">Industries</a>
+                    <a href="#">Products</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="services">
+                    <span>Services</span>
+                    <a href="#">Consulting</a>
+                    <a href="#">Retained Search</a>
+                    <a href="#">Contingency Search</a>
+                    <a href="#">Managed Services</a>
+                </div>
+                <div class="contact">
+                    <span>Contact</span>
+                    <p>Corporate Headquaters 329 odyssey lane, Miliptas, CA- 95035</p>
+                    <p class="numb">+1 (919) 607-2143</p>
+                    <a href="mailto:hr@ancileinc.com">hr@ancileinc.com</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="social">
+            <div class="copy">
+                &copy; Ancile Inc. 2022 All Rights Reserved.
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i><span>Face</span></a>
+                <a href="#"><i class="fab fa-instagram"></i><span>Inst</span></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i><span>Link</span></a>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <script src="script.js"></script>
+
+
+</body>
+</html>

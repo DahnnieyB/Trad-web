@@ -1,0 +1,2794 @@
+*{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Epilogue', sans-serif;
+}
+
+.head{
+    color: #2D76DC;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.head span{
+    font-size: 50px;
+}
+
+#nav{
+    display: flex;
+    padding: 30px 30px 30px 50px;
+    line-height: 1px;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    z-index: 1000;
+}
+
+#nav ul{
+    font-size: 18px;
+    display: flex;
+    gap: 40px;
+    margin-left: 750px;
+    transition: max-height 0.3s ease;
+}
+
+#nav ul li a{
+    color: #1E1E1E;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+}
+
+#nav ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, #000, #2D76DC);
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+
+#nav ul li:hover::after{
+    width: 100%;
+}
+
+/* --Menu-Button-------------- */
+.menu{
+    width: 50px;
+    height: 50px;
+    display: none;
+    flex-direction: column;
+    margin: 8px;
+    background-image: linear-gradient(60deg, #2D76DC, #1E1E1E);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu div{
+    width: 30px;
+    height: 4px;
+    margin: 4px;
+    position: relative;
+}
+
+.menu span{
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 70%;
+    transform: translate(-47%, 100%);
+    transition: transform 0.5s, width 0.5s;
+}
+
+.menu .line-1{
+    width: 50%;
+    transform: translate(-90%, -200%);
+}
+
+.menu .line-3{
+    width: 50%;
+    left: auto;
+    right: 0;
+    transform: translate(5px, 400%);
+}
+
+.openmenu .line-1{
+    transform: translate(-1px, -2px) rotate(-45deg);
+}
+
+.openmenu .line-3{
+    transform: translate(-50%, 10px) rotate(-45deg);
+}
+
+.openmenu .line-2{
+    transform: translate(-47%, 100%) rotate(45deg);
+}
+
+.openmenu .line-1,
+.openmenu .line-2,
+.openmenu .line-3 {
+  transition: transform 0.5s;
+}
+
+.openmenu{
+    z-index: 2;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    z-index: 1;
+}
+
+.container .image {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 15s infinite;
+}
+
+.container .image1 {
+    background-image: url('Image/001.jpeg');
+    animation-delay: 0s;
+}
+
+.container .image2 {
+    background-image: url('Image/002.jpeg');
+    animation-delay: 5s;
+}
+
+.container .image3 {
+    background-image: url('Image/003.jpeg');
+    animation-delay: 10s;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 74, 142, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 1.5em;
+    width: 90%;
+}
+
+@keyframes slide {
+    0% {
+        left: 100%;
+    }
+    10% {
+        left: 0;
+    }
+    33.33% {
+        left: 0;
+    }
+    43.33% {
+        left: -100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.service{
+    text-align: center;
+    margin-top: 50px;
+    padding: 0 200px;
+    margin-bottom: 50px;
+}
+
+.service span{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.service p{
+    color: #3A3A3A;
+    margin-top: 20px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.service span, .service p {
+    opacity: 0;
+    animation: slideIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.grid-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin-bottom: 100px;
+    width: 100%;
+    animation: fadeIn 1s forwards;
+}
+
+.grid-content .grid-content-box{
+    background: #F5F5F5;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.grid-content .grid-content-box .image img{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    transition: transform 0.6s ease;
+}
+
+.grid-content .grid-content-box:hover .image img {
+    transform: scale(1.05);
+    border-radius: 5px;
+}
+
+.text{
+    margin: 30px 20px 30px 40px;
+}
+
+.grid-content .grid-content-box .text span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.grid-content .grid-content-box .text p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 15px;
+}
+
+.grid-content .grid-content-box .text .man-text{
+    margin-top: 20px;
+}
+
+.grid-content .grid-content-box .text a{
+    margin-top: 20px;
+    color: #2D76DC;
+    font-size: 13px;
+}
+
+.grid-content-box:nth-child(1) {
+    animation: fadeSlideIn 0.5s 1s forwards;
+}
+
+.grid-content-box:nth-child(2) {
+    animation: fadeSlideIn 0.5s 2s forwards;
+}
+
+.grid-content-box:nth-child(3) {
+    animation: fadeSlideIn 0.5s 3s forwards;
+}
+
+.grid-content-box:nth-child(4) {
+    animation: fadeSlideIn 0.5s 4s forwards;
+}
+
+.grid-content-box:nth-child(5) {
+    animation: fadeSlideIn 0.5s 5s forwards;
+}
+
+.grid-content-box:nth-child(6) {
+    animation: fadeSlideIn 0.5s 6s forwards;
+}
+
+.grid-content-box:nth-child(7) {
+    animation: fadeSlideIn 0.5s 7s forwards;
+}
+
+.grid-content-box:nth-child(8) {
+    animation: fadeSlideIn 0.5s 8s forwards;
+}
+
+.grid-content-box:nth-child(9) {
+    animation: fadeSlideIn 0.5s 9s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeSlideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+footer{
+    background: rgb(45, 118, 220);
+    padding: 60px 100px;
+    color: #fff;
+}
+
+footer span{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.footer-content{
+    display: flex;
+    padding-top: 50px;
+}
+
+.footer-content-logo{
+    width: 500px;
+}
+
+.footer-content-logo .client img{
+    float: left;
+}
+
+.footer-content-logo .client .text{
+    padding: 10px 0 0 30px;
+}
+
+.footer-content-logo .client span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-content-logo .client p{
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+hr{
+    margin: 30px 0;
+}
+
+.footer-link{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px;
+    padding-left: 70px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.footer-link span{
+    font-size: 20px;
+}
+
+.footer-link a{
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    margin: 20px 0 0 0;
+    cursor: pointer;
+}
+
+.contact p{
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 25px;
+}
+
+.contact .numb{
+    font-size: 20px;
+}
+
+.social{
+    display: flex;
+}
+
+.copy{
+    flex-basis: 50%;
+}
+
+.social-icons{
+    text-align: right;
+    flex-basis: 50%;
+}
+
+.social-icons a{
+    color: #fff;
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.social-icons span{
+    display: none;
+}
+
+/* ==Client-Page============================= */
+
+.client-heading{
+    display: flex;
+    background: linear-gradient(45deg, #F5F5F5, #FBFBFB, #FFFFFF);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.client-heading-text{
+    flex-basis: 50%;
+    padding: 200px 0 0 100px;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.client-heading-img{
+    flex-basis: 50%;
+    padding-top: 100px;
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+.client-heading-img img{
+    width: 100%;
+}
+
+.client-heading-text .highlight{
+    display: block;
+    font-size: 23px;
+    font-weight: 700;
+    color: #2D76DC;
+    margin-bottom: 10px;
+}
+
+.client-heading-text .title{
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    color: #1E1E1E;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.client-heading-text input{
+    border: none;
+    padding: 15px 40px;
+    background: #2D76DC;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.client-heading-text input:hover{
+    background: #1B5AB6;
+}
+
+.main{
+    display: flex;
+    margin: 80px 0 250px 100px;
+}
+
+.main span{
+    position: absolute;
+    background: #2D76DC;
+    width: 500px;
+    height: 500px;
+    border-radius: 3px;
+}
+
+.main span img{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    top: -20px;
+    left: -20px;
+    border-radius: 3px;
+}
+
+.main .main-text{
+    margin-left: 600px;
+    margin-top: 40px;
+    padding-right: 200px;
+}
+
+.main .main-text .heading{
+    font-size: 40px;
+    font-weight: 700;
+    width: 60%;
+    margin-bottom: 40px;
+}
+
+.main .main-text .para-1, .para-2{
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.support-client{
+    padding: 0 80px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.support-client h1{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.support-client img{
+    width: 100%;
+    height: 60px;
+}
+
+.comment{
+    display: flex;
+    margin: 70px 75px;
+    background: #2D76DC;
+}
+
+.comment p{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+    color: #fff;
+    padding: 100px 200px 50px 80px;
+    line-height: 1.5;
+}
+
+.comment img{
+    width: 600px;
+}
+
+.comment span{
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.comment .quick{
+    font-weight: normal;
+}
+
+.inquiry{
+    padding: 50px 300px;
+}
+
+.inquiry h1{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.inquiry form{
+    width: 60%;
+    margin-bottom: 100px;
+}
+
+label{
+    display: block;
+    margin: 30px 0 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1E1E1E;
+}
+
+.inquiry form input[type="text"], .inquiry form input[type="email"], .inquiry form input[type="tel"], .inquiry form input[type="url"]{
+    width: 320px;
+    padding: 15px 5px;
+    border: 1px solid #1E1E1E;
+    border-radius: 2px;
+}
+
+.inquiry form input[type="submit"] {
+    margin-top: 50px;
+    padding: 20px 50px;
+    border: none;
+    background-color: #2D76DC;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.inquiry form input[type="submit"]:hover {
+    background-color: #1B5AB6;
+}
+
+.insight{
+    margin: 70px 50px;
+}
+
+.insight-text{
+    text-align: center;
+}
+
+.insight-text-head{
+    font-size: 25px;
+    color: #090909;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.insight-text-p{
+    padding: 0 200px;
+}
+
+.insight-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.insight-box{
+    background: #2D76DC;
+    margin: 50px 10px;
+    color: #fff;
+}
+
+.insight-box img{
+    width: 100%;
+    height: 200px;
+    transition: transform 0.6s ease;
+}
+
+.insight-box:hover img{
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+
+.insight-box-text{
+    padding: 10px 20px;
+    text-align: initial;
+}
+
+.insight-box-head{
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.insight-box-text hr{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.insight-box-number{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.insight-box-foot{
+    display: flex;
+    font-size: 12px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.insight-box-foot i{
+    font-size: 25px;
+    margin-left: 80%;
+}
+
+.visit{
+    background: #F5F5F5;
+    text-align: center;
+    padding: 70px 100px;
+}
+
+.visit span{
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.visit button{
+    font-size: 12px;
+    border: none;
+    background: #2D76DC;
+    color: #fff;
+    margin-top: 30px;
+    padding: 15px 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.visit button:hover{
+    background-color: #1B5AB6;
+}
+
+/* ==Animations============================= */
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ==Candidates Styles================================ */
+
+.candidates-heading{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.candidates-heading .image{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.candidates-heading .image img{
+    margin-top: 80px;
+    width: 100%;
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+.candidates-heading .overlay-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.candidates-heading .overlay-1 span{
+    color: #2D76DC;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.candidates-heading .overlay-1 button{
+    font-size: 12px;
+    border: none;
+    background: #2D76DC;
+    color: #fff;
+    margin-top: 80px;
+    padding: 15px 45px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.candidates-heading .overlay-1 button:hover{
+    background-color: #1B5AB6;
+}
+
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    flex: 1;
+    position: relative;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-container img {
+    position: inherit;
+    width: 400px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.image-container span{
+    position: absolute;
+    top: 400px;
+    left: 0;
+    background: #2D76DC;
+    width: 100%;
+    height: 200px;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.text-container {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.text-container h2 {
+    padding-right: 250px;
+    font-size: 2em;
+    color: #1E1E1E;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 70px;
+}
+
+.text-container p {
+    font-size: 15px;
+    color: #3A3A3A;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.content-section .apply-button {
+    display: inline-block;
+    background-color: #2D76DC;
+    color: #fff;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.apply-button:hover {
+    background-color: #1B5AB6;
+}
+
+.testimonial-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.quote-container {
+    flex: 1;
+    position: relative;
+    padding: 150px 100px 150px 150px;
+}
+
+.quote-container .quote {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.author {
+    font-size: 13px;
+    color: #1E1E1E;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.author .author-name {
+    font-weight: bold;
+}
+
+.author .author-industry{
+    font-weight: 500;
+}
+
+.image-container-2 {
+    flex: 1;
+}
+
+.image-container-2 img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.corner-accent {
+    position: absolute;
+    width: 80px;
+    height: 70px;
+    background-color: #2D76DC;
+}
+
+.top-left {
+    top: 30px;
+    left: 0;
+}
+
+.bottom-left {
+    bottom: 30px;
+    left: 0;
+}
+
+.corner-accent-1 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+}
+
+.top-left-1{
+    top: 60px;
+    left: 40px;
+}
+
+.bottom-left-1{
+    bottom: 60px;
+    left: 40px;
+}
+
+/* ==Consultant Styles===================================== */
+
+.consultant-heading{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.consultant-heading .image{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.consultant-heading .image img{
+    margin-top: 80px;
+    width: 100%;
+}
+
+.consultant-heading .overlay-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.consultant-heading .overlay-1 span{
+    color: #A7D8FF;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.consultant-heading .overlay-1 h1{
+    color: #fff;
+    font-size: 40px;
+    width: 40%;
+    line-height: 1.1;
+}
+
+.consultant-heading .overlay-1 button{
+    font-size: 12px;
+    border: none;
+    background: #2D76DC;
+    color: #fff;
+    margin-top: 80px;
+    padding: 15px 45px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.consultant-heading .overlay-1 button:hover{
+    background-color: #1B5AB6;
+}
+
+.consultant-content{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.text-container-1 {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.text-container-1 h2 {
+    padding-right: 200px;
+    font-size: 2em;
+    color: #1E1E1E;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 90px;
+    line-height: 1.2;
+}
+
+.text-container-1 p {
+    font-size: 13px;
+    color: #3A3A3A;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.image-container-1 {
+    flex: 1;
+    padding: 70px;
+    text-align: center;
+}
+
+.image-container-1 img {
+    width: 500px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.consultant-testimonial{
+    display: flex;
+    margin-bottom: 70px;
+    width: 80%;
+    margin-left: 120px;
+}
+
+.consultant-testimonial .image{
+    flex: 1;
+    width: 450px;
+    text-align: right;
+    background-size: cover;
+    background-position: center;
+}
+
+.consultant-testimonial .image img{
+    width: 400px;
+    height: 354px;
+}
+
+.consultant-testimonial .text{
+    flex: 1;
+    background: #2D76DC;
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.3;
+    margin: 0;
+    margin-right: 100px;
+    padding: 70px 30px 50px 50px;
+    height: 230px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.consultant-testimonial .text .author{
+    color: #fff;
+    margin-top: 30px;
+}
+
+.apply-form{
+    width: 60%;
+    padding-left: 300px;
+    margin-bottom: 100px;
+}
+
+.form-group{
+    display: flex;
+    gap: 20px;
+}
+
+.apply-form form input[type="text"], .apply-form form input[type="email"], .apply-form form input[type="tel"], .apply-form form input[type="url"]{
+    width: 300px;
+    padding: 15px 15px;
+    border: 1px solid #1E1E1E;
+    border-radius: 2px;
+}
+
+.apply-form label{
+    font-size: 15px;
+}
+
+.upload-container{
+    width: 310px;
+    border: 1px solid #1E1E1E;
+    padding: 10px;
+}
+
+.upload-container button{
+    background: #2D76DC;
+    color: #fff;
+    padding: 7px 35px;
+    margin-right: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.upload-container .choose-file{
+    background: #D9D9D9;
+    color: #1E1E1E;
+}
+
+.upload-container input[type="file"]{
+    display: none;
+}
+
+.upload-container small{
+    display: block;
+}
+
+.apply-form form input[type="submit"] {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 15px 70px;
+    border: none;
+    background-color: #2D76DC;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.apply-form form input[type="submit"]:hover {
+    background-color: #1B5AB6;
+}
+
+/* ==Productivity Styles============================================ */
+
+.product{
+    margin-bottom: 50px;
+}
+
+.background{
+    background: #2D76DC;
+    padding: 200px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.background h1{
+    font-size: 70px;
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+.about{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.about-product{
+    display: flex;
+    margin-top: 20px;
+    padding: 0 200px;
+    margin-bottom: 150px;
+}
+
+.about-product .image{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #2D76DC;
+    border-radius: 50%;
+}
+
+.about-product .image img{
+    width: 400px;
+    position: absolute;
+    top: 50px;
+    left: -50px;
+}
+
+.about-product .text{
+    padding: 50px 0 0 80px;
+    margin: 0;
+    text-align: initial;
+}
+
+.about-product .text p{
+    margin-bottom: 50px;
+}
+
+.about-product .text a{
+    color: #fff;
+    background: #2D76DC;
+    padding: 10px 30px;
+    font-size: 13px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.about-product .text a:hover{
+    background: #1B5AB6;
+}
+
+.ocreal{
+    text-align: center;
+}
+
+.ocreal-about{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 150px;
+    padding: 0 200px;
+}
+
+.ocreal-about .image{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #2D76DC;
+    border-radius: 50%;
+}
+
+.ocreal-about .image img{
+    width: 400px;
+    position: absolute;
+    top: 50px;
+    left: -50px;
+}
+
+.ocreal-about .text{
+    padding: 50px 80px 0 0;
+    margin: 0;
+    text-align: initial;
+}
+
+.ocreal-about .text p{
+    margin-bottom: 50px;
+}
+
+.ocreal-about .text .pa-1, .ocreal-about .text .pa-2{
+    margin-bottom: 20px;
+}
+
+.ocreal-about .text .pa-3{
+    margin-bottom: 30px;
+}
+
+.ocreal-about .text a{
+    color: #fff;
+    background: #2D76DC;
+    padding: 10px 30px;
+    font-size: 13px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.ocreal-about .text a:hover{
+    background: #1B5AB6;
+}
+
+/* ==Making Website Responsive================================== */
+
+@media screen and (max-width: 1120px){
+
+    /* ==index.html styles=========== */
+
+    #nav ul{
+        margin-left: 500px;
+    }
+    .overlay p{
+        width: 850px;
+    }
+    .service{
+        padding: 0 100px;
+    }
+    footer{
+        padding: 60px;
+    }
+    .footer-link{
+        padding-left: 20px;
+        gap: 50px;
+    }
+    
+    /* ==client.html styles======= */
+
+    .main{
+        margin-left: 70px;
+        margin-bottom: 150px;
+    }
+    .main span{
+        width: 350px;
+        height: 350px;
+    }
+    .main span img{
+        width: 350px;
+        height: 350px;
+    }
+    .main .main-text{
+        margin-left: 400px;
+        margin-top: 0;
+        padding-right: 100px;
+    }
+    .comment img{
+        width: 350px;
+    }
+    .comment p{
+        padding-right: 100px;
+    }
+    .inquiry{
+        padding: 50px 100px;
+    }
+    .insight-text-p{
+        padding: 0 100px;
+    }
+    .inquiry form input[type="text"], .inquiry form input[type="email"], .inquiry form input[type="tel"], .inquiry form input[type="url"] {
+        width: 400px;
+        padding: 15px;
+    }
+
+    /* ==candidates.html styles========= */
+
+    .content-section{
+        padding: 40px;
+    }
+    .image-container img{
+        width: 350px;
+    }
+    .image-container span{
+        top: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .text-container h2{
+        padding-right: 100px;
+        margin-bottom: 20px;
+    }
+    .text-container p{
+        line-height: 1.2;
+    }
+    .testimonial-section{
+        padding: 30px;
+    }
+    .image-container-2{
+        padding: 30px;
+    }
+    .image-container-2 img{
+        width: 350px;
+    }
+    .quote-container{
+        padding: 100px 0;
+        padding-left: 70px;
+    }
+
+    /* ==consultant.html styles======== */
+
+    .text-container-1 h2{
+        padding-right: 100px;
+        margin-bottom: 20px;
+    }
+    .image-container-1{
+        padding: 110px 30px 30px 30px;
+    }
+    .image-container-1 img{
+        width: 350px;
+    }
+    .text-container-1 p{
+        width: 100%;
+        line-height: 1.2;
+    }
+    .consultant-testimonial{
+        width: 95%;
+        margin-left: 20px;
+    }
+    .consultant-testimonial .text{
+        margin-right: 0;
+    }
+    .apply-form{
+        padding-left: 150px;
+    }
+    .about-product{
+        padding: 0 100px;
+    }
+    .about-product .text{
+        padding-top: 20px;
+    }
+    .ocreal-about{
+        padding: 0 100px;
+    }
+    .ocreal-about .text{
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+
+    /* ==Index.html styles======== */
+
+    #nav ul{
+        margin-left: 450px;
+    }
+    footer{
+        padding: 60px;
+    }
+    .footer-link{
+        padding-left: 20px;
+        gap: 50px;
+    }
+
+    /* ==client.html styles======= */
+
+    .main{
+        margin-left: 70px;
+        margin-bottom: 150px;
+    }
+    .main span{
+        width: 350px;
+        height: 350px;
+    }
+    .main span img{
+        width: 350px;
+        height: 350px;
+    }
+    .main .main-text{
+        margin-left: 400px;
+        margin-top: 0;
+        padding-right: 100px;
+    }
+    .comment img{
+        width: 350px;
+    }
+    .comment p{
+        padding: 100px;
+    }
+    .inquiry{
+        padding: 50px 100px;
+    }
+    .insight-text-p{
+        padding: 0 100px;
+    }
+
+    /* ==candidates.html styles========= */
+
+    .content-section{
+        padding: 40px;
+    }
+    .image-container img{
+        width: 350px;
+    }
+    .image-container span{
+        top: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .text-container h2{
+        padding-right: 100px;
+        margin-bottom: 20px;
+    }
+    .text-container p{
+        line-height: 1.2;
+    }
+    .testimonial-section{
+        padding: 30px;
+    }
+    .image-container-2{
+        padding: 30px;
+    }
+    .image-container-2 img{
+        width: 350px;
+    }
+    .quote-container{
+        padding: 100px 0;
+        padding-left: 70px;
+    }
+
+    /* ==consultant.html styles======== */
+
+    .text-container-1 h2{
+        padding-right: 100px;
+        margin-bottom: 20px;
+    }
+    .image-container-1{
+        padding: 110px 30px 30px 30px;
+    }
+    .image-container-1 img{
+        width: 350px;
+    }
+    .text-container-1 p{
+        width: 100%;
+        line-height: 1.2;
+    }
+    .consultant-testimonial{
+        width: 95%;
+        margin-left: 20px;
+    }
+    .consultant-testimonial .text{
+        margin-right: 0;
+    }
+    .apply-form{
+        padding-left: 150px;
+    }
+    .about-product{
+        padding: 0 100px;
+    }
+    .about-product .text{
+        padding-top: 20px;
+    }
+    .ocreal-about{
+        padding: 0 100px;
+    }
+    .ocreal-about .text{
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 980px){
+
+    /* ==index.html styles================= */
+
+    #nav ul{
+        margin-left: 400px;
+    }
+    footer{
+        padding: 60px 30px;
+    }
+    .footer-link{
+        gap: 20px;
+    }
+    
+    /* ==client.html styles=============== */
+
+    .client-heading-img img{
+        height: 100%;
+    }
+    .comment{
+        width: 95%;
+        margin: 20px;
+    }
+    .inquiry form input[type="text"], .inquiry form input[type="email"], .inquiry form input[type="tel"], .inquiry form input[type="url"]{
+        width: 300px;
+    }
+    .insight-text-head{
+        margin-bottom: 30px;
+    }
+    .insight-text-p{
+        padding: 0;
+    }
+    .insight-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .insight-box-head{
+        font-size: 25px;
+    }
+    .insight-box{
+        margin: 10px;
+    }
+
+    /* ==candidates.html styles=================== */
+
+    .text-container{
+        padding-bottom: 30px;
+    }
+    .text-container h2{
+        padding-right: 0;
+    }
+    .content-section .apply-button {
+        margin-top: 0;
+    }
+
+    /* ==consultant.html styles================== */
+
+    .text-container-1 h2{
+        padding-right: 0;
+    }
+
+    /* ==products.html================= */
+
+    .about-product, .ocreal-about{
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 930px){
+    #nav ul{
+        margin-left: 350px;
+    }
+    .overlay p{
+        width: 90%;
+    }
+    .comment p{
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 890px){
+
+    /* ==index.html styles============== */
+
+    #nav ul{
+        margin-left: 300px;
+    }
+    .footer-content-logo {
+        display: none;
+    }
+
+    /* ==client.html styles=================== */
+
+    .main{
+        margin-bottom: 50px;
+    }
+    .main .main-text .heading{
+        width: 100%;
+    }
+    .main .main-text{
+        padding-right: 50px;
+    }
+    .support-client h1{
+        margin-bottom: 20px;
+    }
+    .inquiry form input[type="text"], .inquiry form input[type="email"], .inquiry form input[type="tel"], .inquiry form input[type="url"]{
+        width: 250px;
+    }
+
+    /* ==candidates.html styles================= */
+
+    .candidates-heading .overlay-1 button {
+        margin-top: 20px;
+    }
+    .content-section{
+        padding: 20px;
+    }
+
+    /* ==consultant.html styles============== */
+
+    .text-container-1{
+        padding-right: 20px;
+    }
+    .image-container-1{
+        padding-left: 20px;
+    }
+    .apply-form{
+        padding-left: 100px;
+    }
+
+    /* ==products.html================= */
+
+    .about-product, .ocreal-about{
+        padding: 0 20px;
+        width: 90%;
+    }
+    .about-product .text{
+        padding-left: 50px;
+    }
+    .about-product .image, .ocreal-about .image{
+        width: 250px;
+        height: 250px;
+    }
+    .ocreal-about .text{
+        padding-right: 50px;
+    }
+    .about-product .image img, .ocreal-about .image img{
+        width: 350px;
+    }
+    .about-product .text p{
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 880px){
+
+    /* ==index.html styles====================== */
+
+    #nav ul{
+        margin-left: 250px;
+    }
+    .grid-content .grid-content-box {
+        margin: 10px;
+    }
+
+    /* ==client.html styles==================== */
+    
+    .comment p{
+        padding: 50px;
+    }
+
+    /* ==candidates.html styles================== */
+    
+    .text-container p{
+        margin-bottom: 10px;
+    }
+    .quote-container{
+        padding: 70px;
+        padding-right: 0;
+    }
+    .corner-accent{
+        width: 50px;
+        height: 40px;
+    }
+    .corner-accent-1{
+        width: 30px;
+        height: 30px;
+    }
+    .top-left-1{
+        top: 45px;
+        left: 20px;
+    }
+    .bottom-left-1{
+        bottom: 45px;
+        left: 20px;
+    }
+
+    /* ==product.html styles================= */
+    .apply-form{
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 840px){
+
+    /* ==index.html styles=================== */
+    #nav ul{
+        margin-left: 250px;
+    }
+
+    /* ==client.html styles===================== */
+    .main .main-text{
+        padding-right: 20px;
+    }
+    .main .main-text .heading{
+        margin-bottom: 20px;
+    }
+
+    /* ==consultant.html styles================== */
+    .consultant-heading .overlay-1 h1{
+        width: 100%;
+    }
+    .text-container-1 p{
+        margin-bottom: 10px;
+    }
+    .consultant-testimonial .text{
+        padding: 40px 30px 80px 30px;
+    }
+    .consultant-testimonial .text .author{
+        margin-top: 8px;
+    }
+    .apply-form{
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 780px){
+
+    /* ==index.html styles================= */
+    #nav ul{
+        margin-left: 200px;
+    }
+    .service{
+        padding: 0 20px;
+    }
+    .grid-content .grid-content-box {
+        margin: 5px;
+    }
+    .text{
+        margin: 20px;
+    }
+
+    /* ==client.html styles=================== */
+    .client-heading-img{
+        padding-top: 12%;
+    }
+    .client-heading-img img{
+        width: 350px;
+    }
+    .client-heading-text{
+        padding: 150px 10px 100px 50px;
+    }
+    .client-heading-text .title{
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+    .client-heading-text .highlight{
+        font-size: 18px;
+    }
+    .main span img{
+        width: 300px;
+        height: 300px;
+    }
+    .main span{
+        width: 300px;
+        height: 300px;
+    }
+    .main .main-text{
+        margin-left: 350px;
+    }
+    .main .main-text .heading{
+        margin-bottom: 10px;
+    }
+    .main .main-text .para-1, .para-2{
+        line-height: 1;
+    }
+    .support-client{
+        padding: 0 30px;
+    }
+    .comment p{
+        padding: 30px 50px;
+        line-height: 1.2;
+    }
+    .comment img{
+        width: 300px;
+        height: 300px;
+    }
+    .insight-text-p{
+        margin-bottom: 10px;
+    }
+
+    /* ==candidates.html styles========================= */
+    .image-container img{
+        width: 300px;
+    }
+    .image-container span{
+        top: 310px;
+        height: 130px;
+    }
+    .image-container-2{
+        padding: 20px 0;
+    }
+    .quote-container{
+        padding: 50px 10px 50px 50px;
+    }
+    .top-left{
+        top: 10px;
+    }
+    .top-left-1{
+        top: 25px;
+    }
+    .bottom-left{
+        bottom: 10px;
+    }
+    .bottom-left-1{
+        bottom: 25px;
+    }
+
+    /* ==consultants.htmml styles============================ */
+    .consultant-heading .overlay-1 h1{
+        font-size: 30px;
+    }
+    .consultant-heading .overlay-1 span{
+        margin-top: 20px;
+    }
+    .consultant-heading .overlay-1 button {
+        margin-top: 20px;
+    }
+    .consultant-testimonial .image img{
+        width: 350px;
+        height: auto;
+    }
+    .consultant-testimonial .text{
+        font-size: 17px;
+        padding: 40px;
+    }
+    .consultant-testimonial .text .author {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+    /* ==index.html styles================================= */
+    #nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        margin: 0;
+        padding: 20px 0;
+        animation: slideInRight 1s ease-in-out;
+    }
+    #nav ul.active {
+        display: flex;
+    }
+    .menu {
+        display: flex;
+        position: absolute;
+        top: 1px;
+        left: 130px;
+        margin-left: 500px;
+    }
+    .comment img{
+        height: inherit;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    /* ==index.html styles======================== */
+    .menu{
+        left: 100px;
+    }
+    .grid-content{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ==client.hmtl styles====================== */
+    .main{
+        margin-left: 50px;
+    }
+    .main .main-text{
+        margin-left: 320px;
+    }
+    .main .main-text .heading{
+        font-size: 30px;
+    }
+    .main .main-text .para-1, .para-2{
+        margin-bottom: 10px;
+    }
+    .inquiry{
+        padding: 50px;
+    }
+
+    /* ==candidates.html styles====================== */
+    .content-section{
+        padding-right: 10px;
+    }
+    .text-container{
+        padding-left: 30px;
+    }
+    .text-container h2{
+        font-size: 30px;
+    }
+
+    /* ==product.html styles=================== */
+    .about-product{
+        padding-right: 0;
+        padding-left: 50px;
+    }
+    .about-product-image{
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 650px){
+
+    /* ==index.html styles================== */
+    .menu{
+        left: 70px;
+    }
+
+    /* ==client.html styles=============== */
+    .client-heading-img img{
+        position: relative;
+        width: 612px;
+        height: 500px;
+    }
+    .client-heading-text{
+        position: absolute;
+        top: 100px;
+        z-index: 100;
+        text-align: center;
+    }
+    .client-heading-text .title{
+        color: #fff;
+    }
+    .main{
+        margin-left: 30px;
+    }
+    .comment p{
+        padding: 30px;
+    }
+    .inquiry{
+        padding: 30px;
+    }
+
+    /* ==candidates.html styles====================== */
+    .image-container span{
+        display: none;
+    }
+    .image-container{
+        padding: 0;
+    }
+    .testimonial-section{
+        padding: 10px;
+    }
+    .quote-container{
+        padding: 50px 10px 50px 30px;
+    }
+    .quote-container .quote{
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+    .author{
+        margin-top: 10px;
+    }
+    .top-left{
+        top: 0;
+    }
+    .top-left-1{
+        top: 15px;
+    }
+    .bottom-left{
+        bottom: 0;
+    }
+    .bottom-left-1{
+        bottom: 15px;
+    }
+
+    /* ==consultant.html styles====================== */
+    .consultant-heading .overlay-1 h1{
+        font-size: 20px;
+    }
+    .consultant-heading .overlay-1 span{
+        font-size: 15px;
+    }
+    .image-container-1{
+        padding-left: 10px;
+        padding-top: 150px;
+    }
+    .image-container-1 img{
+        width: 300px;
+    }
+    .consultant-testimonial .image img{
+        width: 300px;
+    }
+    .consultant-testimonial .text{
+        padding: 20px;
+        font-size: 16px;
+        padding-bottom: 13px;
+    }
+    .apply-form{
+        padding-left: 20px;
+    }
+    .apply-form form input[type="text"], .apply-form form input[type="email"], .apply-form form input[type="tel"], .apply-form form input[type="url"]{
+        width: 250px;
+    }
+    .upload-container button{
+        padding: 7px 20px;
+        font-size: 12px;
+    }
+    .upload-container{
+        width: 260px;
+    }
+
+    /* ==productivity.html styles============= */
+    .about-product .image img, .ocreal-about .image img{
+        width: 300px;
+        top: 30px;
+    }
+    .about-product .image, .ocreal-about .image{
+        width: 200px;
+        height: 200px;
+    }
+    .about-product-image{
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 620px){
+
+    /* ==index.html styles===================== */
+    .menu{
+        left: 20px;
+    }
+
+    /* ==client.html styles=================== */
+    .main .main-text{
+        margin-top: 350px;
+        margin-left: 20px;
+    }
+    .main span{
+        margin-left: 50px;
+        border-radius: 50%;
+        animation: slideInLeft 1.5s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.5)
+    }
+    .main span img{
+        left: 150px;
+        top: 0;
+        border-radius: 50%;
+        animation: slideInLeft 3.5s ease-in-out;
+    }
+    .support-client {
+        padding: 0 10px;
+    }
+    .comment{
+        display: block;
+        position: relative;
+        padding-top: 100px;
+        margin-top: 200px;
+        border-radius: 20px;
+    }
+    .comment img{
+        position: absolute;
+        border-radius: 10px;
+        top: -150px;
+        left: 150px;
+    }
+    .inquiry{
+        padding: 15px;
+    }
+    .inquiry form input[type="submit"]{
+        margin-left: 50%;
+        padding: 20px 80px;
+    }
+
+    /* ==candidates.html styles===================== */
+    .candidates-heading .image img{
+        height: 300px;
+    }
+    .content-section{
+        display: block;
+        margin-top: 20px;
+    }
+    .image-container img{
+        width: 300px;
+        margin-left: 150px;
+        -webkit-box-reflect: below 10px linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+    }
+    .testimonial-section{
+        display: block;
+        margin-top: 100px;
+        position: relative;
+    }
+    .image-container-2 img{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: -50px;
+        left: 200px;
+        -webkit-box-reflect: below 10px linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+    }
+    .quote-container{
+        padding: 150px 50px 50px 80px;
+    }
+    .top-left{
+        top: 100px;
+    }
+    .top-left-1{
+        top: 120px;
+    }
+    .bottom-left, .bottom-left-1{
+        left: 530px;
+    }
+    
+    /* ==consultant.html===================== */
+    .consultant-heading .image img{
+        height: 300px;
+    }
+    .consultant-content{
+        display: block;
+    }
+    .image-container-1{
+        padding-top: 50px;
+        padding-bottom: 0;
+        -webkit-box-reflect: below 10px linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+    }
+    .text-container-1{
+        padding: 50px;
+        padding-top: 0;
+    }
+    .text-container-1 h2{
+        margin-top: 20px;
+    }
+    .consultant-testimonial{
+        display: block;
+        position: relative;
+        margin-top: 200px;
+    }
+    .consultant-testimonial .text{
+        padding-top: 160px;
+        font-size: 17px;
+        height: auto;
+        border-radius: 20px;
+    }
+    .consultant-testimonial .image img{
+        position: absolute;
+        top: -150px;
+        left: 150px;
+        border-radius: 50%;
+        height: 300px;
+    }
+    .consultant-testimonial .text .author{
+        margin-top: 20px;
+    }
+
+    /* ==productivity.html styles====================== */
+    .about-product, .ocreal-about{
+        display: block;
+        margin-bottom: 50px;
+    }
+    .about-product-image{
+        margin-left: 150px;
+        margin-top: 20px;
+    }
+    .about-product-image img{
+        -webkit-box-reflect: below 10px linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3));        
+    }
+    .about-product .text{
+        padding-left: 0;
+    }
+    .ocreal-about .text{
+        padding-right: 0;
+        padding-top: 250px;
+    }
+    .ocreal-about{
+        position: relative;
+    }
+    .ocreal-about .about-product-image{
+        position: absolute;
+        top: 0;
+        left: 50px;
+    }
+}
+
+@media screen and (max-width: 570px){
+
+    /* ==index.html styles===================== */
+    .menu{
+        left: 0;
+    }
+    .footer-link{
+        gap: 0;
+    }
+
+    /* ==client.html styles================== */
+    .client-heading-img img{
+        width: 560px;
+    }
+    .comment{
+        margin-right: 0;
+    }
+    .comment img{
+        left: 120px;
+    }
+    .inquiry{
+        padding-left: 150px;
+    }
+    .form-group{
+        display: block;
+    }
+    .inquiry form input[type="submit"]{
+        margin-left: 0;
+    }
+    .insight-container{
+        grid-template-columns: 1fr;
+    }
+    .insight-box, .insight-box img{
+        border-radius: 20px;
+    }
+    .insight-box img{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    /* ==candidates.html styles==================== */
+    .image-container img{
+        margin-left: 120px;
+    }
+    .bottom-left, .bottom-left-1{
+        left: 490px;
+    }
+
+    /* ==consultant.html styles====================== */
+    .text-container-1 p{
+        font-size: 15px;
+    }
+    .consultant-testimonial .image img{
+        left: 120px;
+    }
+    .apply-form{
+        padding-left: 150px;
+    }
+    .apply-form form input[type="submit"]{
+        margin-left: 50px;
+    }
+
+    /* ==productivity.html styles==================== */
+    .about-product .text a, .ocreal-about .text a{
+        margin-left: 170px;
+    }
+}
+
+@media screen and (max-width: 550px){
+
+    /* ==index.html styles======================== */
+    .menu{
+        margin-left: 450px;
+    }
+    .contact .numb{
+        font-size: 15px;
+    }
+
+    /* ==client.html styles======================= */
+    .client-heading-img img{
+        width: 545px;
+    }
+    .main span{
+        margin-left: 30px;
+    }
+    .main span img{
+        left: 130px;
+    }
+    
+    /* ==candidates.html styles==================== */
+    .image-container-2 img{
+        left: 170px;
+    }
+    .bottom-left, .bottom-left-1{
+        left: 450px;
+    }
+
+    /* ==consultant.html styles==================== */
+    .consultant-testimonial .image img{
+        left: 110px;
+    }
+    .apply-form{
+        padding-left: 120px;
+    }
+}
+
+@media screen and (max-width: 520px){
+
+    /* ==index.html styles========================= */
+    .menu{
+        margin-left: 420px;
+    }
+    
+    /* ==client.html styles======================= */
+    .client-heading-img img{
+        width: 515px;
+    }
+    .main span{
+        margin-left: 0;
+    }
+    .comment img {
+        left: 100px;
+    }
+    .inquiry{
+        padding-left: 100px;
+    }
+
+    /* ==candidates.html styles====================== */
+    .image-container img{
+        margin-left: 100px;
+    }    .bottom-left, .bottom-left-1{
+        left: 430px;
+    }
+
+    /* ==productivity.html styles================== */
+    .about-product{
+        padding: 0 20px;
+    }
+    .ocreal-about .about-product-image{
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    /* ==index.html styles========================== */
+    .menu{
+        margin-left: 400px;
+    }
+    .grid-content{
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin-left: 50px;
+    }
+    .grid-content .grid-content-box{
+        margin: 20px 0;
+    }
+
+    /* ==client.html styles======================== */
+    .client-heading-img img{
+        width: 470px;
+        height: auto;
+    }
+    .client-heading-text{
+        top: 0;
+    }
+    .comment img{
+        left: 80px;
+    }
+
+    /* ==candidates.html styles======================= */
+    .bottom-left, .bottom-left-1{
+        left: 400px;
+    }
+    .image-container-2 img{
+        left: 150px;
+        top: -60px;
+    }
+    .image-container img{
+        width: 250px;
+    }
+    .text-container h2{
+        margin-top: 20px;
+    }
+
+    /* ==consultant.html styles========================= */
+    .consultant-heading .overlay-1 h1{
+        width: 100%;
+    }
+    .image-container-1 img{
+        width: 250px;
+    }
+    .consultant-testimonial .image img{
+        width: 250px;
+        height: 250px;
+        top: -130px;
+        left: 100px;
+    }
+    .consultant-testimonial .text{
+        padding-top: 140px;
+    }
+    .apply-form{
+        padding-left: 100px;
+    }
+
+    /* ==productivty.html styles================== */
+    .about-product-image{
+        margin-left: 100px;
+    }
+    .about-product .text a, .ocreal-about .text a{
+        margin-left: 120px;
+    }
+    .ocreal-about .text .pa-1, .ocreal-about .text .pa-2{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 450px){
+
+    /* ==index.html styles========================== */
+    .menu{
+        margin-left: 350px;
+    }
+    .overlay{
+        padding-left: 0;
+    }
+    .service span, .service p{
+        margin: 0;
+        font-size: 16px;
+    }
+    footer{
+        padding: 50px 10px;
+    }
+    .footer-link{
+        padding-left: 0;
+        margin-top: 0;
+        display: flex;
+        gap: 40px;
+    }
+    .contact p{
+        line-height: 1.2;
+    }
+
+    /* ==client.html stlyes================= */
+    .client-heading-img img{
+        width: 450px;
+    }
+    .main{
+        margin-left: 15px;
+    }
+    .main span, .main span img{
+        width: 250px;
+        height: 250px;
+    }
+    .main .main-text{
+        margin-top: 280px;
+    }
+    .comment img{
+        width: 250px;
+        top: -110px;
+        left: 70px;
+    }
+    .inquiry{
+        padding-left: 70px;
+    }
+    .inquiry form input[type="submit"]{
+        padding: 15px 50px;
+        margin-top: 20px;
+        margin-left: 60px;
+    }
+    .insight{
+        margin: 70px 20px;
+    }
+    .visit{
+        padding: 30px;
+    }
+
+    /* ==candidates.html styles======================== */
+    .content-section{
+        padding-left: 0;
+    }
+    .image-container img{
+        margin-left: 80px;
+    }
+    .image-container-2 img{
+        left: 130px;
+        border-radius: 0;
+    }
+    .quote-container{
+        padding-left: 50px;
+        padding-right: 30px;
+    }
+    .bottom-left, .bottom-left-1{
+        left: 350px;
+    }
+    .apply-form{
+        padding-left: 80px;
+    }
+
+    /* ==consultant.html styles===================== */
+    .text-container-1{
+        padding: 0 30px 30px 30px;
+    }
+    .consultant-testimonial .image img{
+        left: 70px;
+    }
+
+    /* =productivity.html styles=================== */
+    .background h1{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 430px){
+
+    /* ==client.html=============== */
+    .client-heading-img img{
+        width: 425px;
+    }
+
+    /* ==consultant.html styles============== */
+    .consultant-testimonial{
+        margin-left: 10px;
+    }
+    .consultant-testimonial .image img{
+        left: 80px;
+    }
+}
+
+@media screen and (max-width: 415px){
+
+    /* ==client.html styles============== */
+    .client-heading-img img{
+        width: 405px;
+    }
+    .client-heading-text{
+        padding: 100px 10px 100px 50px;
+    }
+    .comment{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    /* ==index.html styles==================== */
+    .menu{
+        margin-left: 320px;
+    }
+    .overlay h1{
+        font-size: 40px;
+    }
+    .overlay {
+        padding: 0;
+    }
+    .footer-link{
+        gap: 20px;
+    }
+    .footer-link a{
+        margin-top: 10px;
+    }
+
+    /* ==client.html styles==================== */
+    .client-heading-img img{
+        width: 400px;
+    }
+    .client-heading-text{
+        padding: 100px 10px;
+    }
+    .main{
+        margin-left: 0;
+    }
+    .comment{
+        margin-left: 10px;
+    }
+    .comment img{
+        left: 60px;
+    }
+
+    /* ==candidates.html styles===================== */
+    .image-container img{
+        margin-left: 50px;
+    }
+    .content-section{
+        padding: 20px;
+    }
+    .text-container{
+        padding: 0;
+    }
+    .support-client{
+        display: none;
+    }
+    .top-left, .top-left-1, .bottom-left, .bottom-left-1{
+        display: none;
+    }
+    .image-container-2 img{
+        left: 100px;
+        border-radius: 50%;
+    }
+    .quote-container{
+        padding: 140px 30px 0 30px;
+    }
+
+    /* ==consultant.html styles================== */
+    .consultant-testimonial{
+        margin-left: 10px;
+    }
+    .consultant-testimonial .image img{
+        left: 60px;
+    }
+    .apply-form{
+        padding-left: 50px;
+    }
+
+    /* ==productivity.html styles================= */
+    .about-product-image{
+        margin-left: 80px;
+    }
+}
+
+@media screen and (max-width: 390px){
+
+    /* ==index.html styles================ */
+    .grid-content{
+        margin-left: 40px;
+    }
+
+    /* ==clients.html=============== */
+    .client-heading-img img{
+        width: 385px;
+    }
+    .main span{
+        margin-left: 10px;
+    }
+    .main span img{
+        left: 120px;
+    }
+    .inquiry{
+        padding-left: 50px;
+    }
+
+    /* ==consultant.html styles============== */
+    .consultant-heading .overlay-1{
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 375px){
+
+    /* ==index.html styles==================== */
+    .menu{
+        margin-left: 300px;
+    }
+    .service{
+        padding: 0;
+    }
+    .grid-content{
+        margin-left: 35px;
+    }
+    .services{
+        margin-left: 10px;
+    }
+    .contact{
+        text-align: end;
+    }
+    .contact p{
+        margin-top: 10px;
+    }
+    footer span{
+        font-size: 20px;
+    }
+
+    /* ==client.html styles========================= */
+    .client-heading-img img{
+        width: 370px;
+    }
+    .main span{
+        margin-left: 10px;
+    }
+    .main span, .main span img{
+        width: 230px;
+        height: 230px;
+    }
+    .main .main-text .para-1, .para-2{
+        line-height: 1.2;
+    }
+    .inquiry{
+        padding-left: 50px;
+    }
+
+    /* ==consultant.html styles================== */
+    .consultant-testimonial .image img{
+        left: 50px;
+    }
+
+    /* ==productivity.html styles================== */
+    .about-product .text a, .ocreal-about .text a{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 360px){
+
+    /* ==clients.html=============== */
+    .client-heading-img img{
+        width: 360px;
+    }   
+    .main span img{
+        left: 110px;
+    }
+    .comment img{
+        left: 50px;
+    }
+
+    /* ==candidates.html styles============ */
+    .image-container img{
+        margin-left: 35px;
+    }
+    .image-container-2 img{
+        left: 80px;
+    }
+
+    /* ==productivity.html styles=============== */
+    .about-product, .ocreal-about{
+        padding-right: 0;
+    }
+}
