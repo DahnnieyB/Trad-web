@@ -2751,7 +2751,7 @@ label{
         padding-left: 20px;
     }
     .menu{
-        margin-left: 270px;
+        margin-left: 250px;
     }
     .service{
         padding: 0;
@@ -2762,14 +2762,14 @@ label{
     .services{
         margin-left: 10px;
     }
-    .contact{
-        text-align: end;
-    }
     .contact p{
         margin-top: 10px;
     }
     footer span{
         font-size: 20px;
+    }
+    .footer-link{
+        gap: 8px;
     }
 
     /* ==client.html styles========================= */
@@ -2780,14 +2780,17 @@ label{
         margin-left: 10px;
     }
     .main span, .main span img{
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
+    }
+    .comment img{
+        left: 40px;
     }
     .main .main-text .para-1, .para-2{
         line-height: 1.2;
     }
     .inquiry{
-        padding-left: 50px;
+        padding-left: 30px;
     }
 
     /* ==consultant.html styles================== */
