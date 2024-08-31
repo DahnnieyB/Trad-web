@@ -1315,10 +1315,30 @@ label{
 
 /* ==Making Website Responsive================================== */
 
+@media screen and (max-width: 1260px){
+
+    #nav ul{
+        margin-left: 680px;
+    }
+}
+
+@media screen and (max-width: 1190px){
+
+    #nav ul{
+        margin-left: 640px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+
+    #nav ul{
+        margin-left: 600px;
+    }
+}
+
 @media screen and (max-width: 1120px){
 
     /* ==index.html styles=========== */
-
     #nav ul{
         margin-left: 500px;
     }
@@ -1337,7 +1357,6 @@ label{
     }
     
     /* ==client.html styles======= */
-
     .main{
         margin-left: 70px;
         margin-bottom: 150px;
@@ -1373,7 +1392,6 @@ label{
     }
 
     /* ==candidates.html styles========= */
-
     .content-section{
         padding: 40px;
     }
@@ -1406,7 +1424,6 @@ label{
     }
 
     /* ==consultant.html styles======== */
-
     .text-container-1 h2{
         padding-right: 100px;
         margin-bottom: 20px;
@@ -1445,10 +1462,9 @@ label{
     }
 }
 
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1055px){
 
     /* ==Index.html styles======== */
-
     #nav ul{
         margin-left: 450px;
     }
@@ -1461,7 +1477,6 @@ label{
     }
 
     /* ==client.html styles======= */
-
     .main{
         margin-left: 70px;
         margin-bottom: 150px;
@@ -1493,7 +1508,6 @@ label{
     }
 
     /* ==candidates.html styles========= */
-
     .content-section{
         padding: 40px;
     }
@@ -2737,7 +2751,7 @@ label{
         padding-left: 20px;
     }
     .menu{
-        margin-left: 300px;
+        margin-left: 270px;
     }
     .service{
         padding: 0;
